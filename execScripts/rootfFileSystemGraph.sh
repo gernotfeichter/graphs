@@ -1,4 +1,6 @@
 #!/bin/env bash
+# conky graphs - most important monitoring graphs
+# 2021 Gernot Feichter
 
 DF_CMD_OUTPUT_LINE="$(df -h | grep '/$')"
 

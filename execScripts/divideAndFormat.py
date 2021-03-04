@@ -1,4 +1,6 @@
 #!/bin/env python2.7
+# conky graphs - most important monitoring graphs
+# 2021 Gernot Feichter
 
 import sys
 
