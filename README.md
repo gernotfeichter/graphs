@@ -6,11 +6,13 @@ Graphs is mostly a configuration file for conky that makes conky display the mos
 
 ## Install
 
+### general
+It is advised to to use a dark backround image to have enough contrast to be able to read the displayed values.
+
 ### manual
-1. install conky package
-1. copy graphs folder to ~/.conky/
-1. open 'Conky Manager' and select this folder or via cli: \
-   `conky -c graphs.conf`
+1. install conky
+2. run `conky -c graphs.conf`
+3. to make it permanent, add the previous command to your shell initialisation scripts
 
 ## Screenshot
 ![alt](graphs.png)
@@ -19,7 +21,7 @@ Graphs is mostly a configuration file for conky that makes conky display the mos
 
 What makes graphs different from similar configration files is the consistency of using graphs for displaying values. Other configurations frequently mix up gauges with graphs etc.
 
-I prefer graphs for one main reason, that is to have the opportunity to see both past and present values.
+I prefer graphs for one main reason, that is to have the opportunity to see both past and present values at a glance.
 
 The top processes and their individual resource allocations are an exception and are not displayed as graphs. This would require drawing more graphs (clutter) than what is practical to display.
 
