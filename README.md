@@ -4,7 +4,7 @@
 Conky is a free, light-weight system monitor for X.
 Graphs is mostly a configuration file for conky that makes conky display the most important computer resource allocations as graphs on your desktop.
 
-## Install
+## Installation
 
 ### general
 It is advised to to use a dark backround image to have enough contrast to be able to read the displayed values.
