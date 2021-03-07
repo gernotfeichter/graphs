@@ -10,9 +10,10 @@ Graphs is mostly a configuration file for conky that makes conky display the mos
 It is advised to to use a dark backround image to have enough contrast to be able to read the displayed values.
 
 ### manual
-1. install conky
-2. run `conky -c graphs.conf`
-3. to make it permanent, add the previous command to your shell initialisation scripts
+1. install [conky](https://github.com/brndnmtthws/conky)
+2. `curl `
+3. run `conky -c graphs.conf`
+4. to make it permanent, add the previous command to your shell initialisation scripts
 
 ## Screenshot
 ![alt](graphs.png)
