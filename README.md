@@ -6,14 +6,27 @@ Graphs is mostly a configuration file for conky that makes conky display the mos
 
 ## Installation
 
-### general
+### Preliminary notes
 It is advised to to use a dark backround image to have enough contrast to be able to read the displayed values.
 
-### manual
-1. install [conky](https://github.com/brndnmtthws/conky)
-2. `curl `
-3. run `conky -c graphs.conf`
-4. to make it permanent, add the previous command to your shell initialisation scripts
+### Manual installation
+1. Install [conky](https://github.com/brndnmtthws/conky)
+2. Install graphs in a shell:
+   ```sh
+   GRAPHS_VERSION=1.0.0
+   GRAPHS_ARCHIVE="graphs-${GRAPHS_VERSION}.tgz"
+   GRAPHS_BASE="$HOME/.graphs"
+   mkdir "${GRAPHS_BASE}"
+   curl "https://raw.githubusercontent.com/gernotfeichter/graphs/master/build/distributions/${GRAPHS_ARCHIVE}" -o "${GRAPHS_BASE}/${GRAPHS_ARCHIVE}"
+   tar xvzf "${GRAPHS_BASE}/${GRAPHS_ARCHIVE}" -C "${GRAPHS_BASE}"
+   rm "${GRAPHS_BASE}/${GRAPHS_ARCHIVE}"
+   ```
+3. Run graphs in same shell as it was installed:
+   ```sh
+   conky -c "${GRAPHS_BASE}/graphs.conf"
+   ```
+   Now you should see graphs on your desktop!
+4. To make it permanent, add the last command to your system startup
 
 ## Screenshot
 ![alt](graphs.png)
