@@ -9,7 +9,7 @@ plugins {
     id 'base'
 }
 
-version = "1.0.0"
+version = "1.0.1"
 
 task buildTarball(type: Tar) {
         from "${projectDir}/"
@@ -17,3 +17,22 @@ task buildTarball(type: Tar) {
         exclude "*gradle*"
         compression = Compression.GZIP
 }
+build.finalizedBy(buildTarball)
+
+task test(type: Exec, description: "Should display conky graphs on your desktop. However, the verification needs to happen manually. If not stopped manually, this will run in an infinite loop!") {
+  //on linux
+  commandLine( ['conky', '-c', 'graphs.conf'] )
+
+  //store the output instead of printing to the console:
+  standardOutput = new ByteArrayOutputStream()
+
+  //extension method stopTomcat.output() can be used to obtain the output:
+  ext.output = {
+    return standardOutput.toString()
+  }
+  doLast() {
+      println(ext.output())
+  }
+
+}
+
