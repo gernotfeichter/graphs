@@ -1,4 +1,4 @@
-#!/bin/env python2.7
+#!/usr/bin/env python2.7
 # conky graphs - most important monitoring graphs
 # Copyright (C) 2021 Gernot Feichter
 

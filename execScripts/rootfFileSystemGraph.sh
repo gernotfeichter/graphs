@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # conky graphs - most important monitoring graphs
 # Copyright (C) 2021 Gernot Feichter
 
